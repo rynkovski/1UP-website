@@ -21,6 +21,22 @@ const useStyles = createStyles((theme) => ({
       marginBottom: theme.spacing.sm,
     },
   },
+
+  curved: {
+    position: 'relative',
+    background: '#2c3e50',
+    height: '50vh',
+    '&:after': {
+      content: '""',
+      borderTopLeftRadius: '50% 100%',
+      borderTopRightRadius: '50% 100%',
+      position: 'absolute',
+      bottom: '0',
+      width: '100%',
+      background: 'linear-gradient(#2ecde6 -80%, #162947 95%)',
+      height: '15%',
+    },
+  },
 }))
 
 export default useStyles

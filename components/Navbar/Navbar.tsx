@@ -89,22 +89,13 @@ export function Navbar() {
   return (
     <div className={classes.header}>
       <Container fluid bg={'#072f37'} className={classes.navbar}>
-        <Container size={'xl'}>
+        <Container size={'xl'} px={"8px"}>
           <Header height={'100%'} bg={'#072f37'} sx={{ border: 0 }}>
             <Grid justify="space-between" align="center">
-              <Grid.Col
-                span={3}
-                pl={20}
-                className={classes.hiddenMd}
-                sx={{ display: 'flex', justifyContent: 'left' }}
+              <Grid.Col span={isMd ? 8 : 6} sx={{ display: 'flex', justifyContent: "left" }}
+
+
               >
-                <Center>
-                  <Group>
-                    <NavLinkSection navLinks={navLinks} />
-                  </Group>
-                </Center>
-              </Grid.Col>
-              <Grid.Col span={isMd ? 8 : 6}>
                 {isMd ? (
                   <Image
                     src={oneuplogo.src}
@@ -118,6 +109,18 @@ export function Navbar() {
                     <Image src={oneuplogo.src} alt="Logo" fit="contain" height={70} />
                   </Link>
                 )}
+              </Grid.Col>
+              <Grid.Col
+                span={3}
+
+                className={classes.hiddenMd}
+                sx={{ display: 'flex', justifyContent: 'center', flexWrap: "nowrap" }}
+              >
+                <Center >
+                  <Group>
+                    <NavLinkSection navLinks={navLinks} />
+                  </Group>
+                </Center>
               </Grid.Col>
               <Grid.Col
                 span={isMd ? 4 : 3}

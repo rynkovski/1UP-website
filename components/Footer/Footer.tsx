@@ -28,11 +28,13 @@ export function Footer({ links }: Props) {
 
   return (
     <div className={classes.footer}>
-      <div className={classes.inner}>
-        <Group className={classes.links}>{items}</Group>
-        <Text color="dimmed">Copyright © 2023 ONEUP-CARTEL</Text>
-        <Group spacing="xs" position="right" noWrap />
-      </div>
+      <section className={classes.curved}>
+        <div className={classes.inner}>
+          <Group className={classes.links}>{items}</Group>
+          <Text color="dimmed">Copyright © 2023 ONEUP-CARTEL</Text>
+          <Group spacing="xs" position="right" noWrap />
+        </div>
+      </section>
     </div>
   )
 }

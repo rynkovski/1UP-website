@@ -24,17 +24,17 @@ export function Communities() {
         We are working with
       </Text>
       <Space h={20} />
-      <Grid>
+      <Grid >
         {
           comumnityData.map((item, index) => (
             <Grid.Col span={2} key={index}>
               {item.tag != 'none' ?
                 <Link href={item?.tag}>
-                  <Card p="md" bg={'radial-gradient(#2ecde6 30%, #162947 130%)'} radius="md" className={classes.card}>
+                  <Card p="md" bg={'radial-gradient(#2ecde6 30%, #162947 130%)'} radius="md" className={classes.card} sx={{ border: "1px solid white" }}>
                     <Image src={item.image} alt={item.name} fit='scale-down' />
                   </Card>
                 </Link> :
-                <Card p="md" bg={'radial-gradient(#2ecde6 30%, #162947 130%)'} radius="md" className={classes.card}>
+                <Card p="md" bg={'radial-gradient(#2ecde6 30%, #162947 130%)'} radius="md" className={classes.card} sx={{ border: "1px solid white" }}>
                   <Image src={item.image} alt={item.name} fit='scale-down' />
                 </Card>
               }
